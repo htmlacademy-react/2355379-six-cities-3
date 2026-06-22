@@ -1,4 +1,12 @@
-function FavoritesPage(): JSX.Element {
+import { Offer } from '../../types/offer';
+
+type FavoritesPageProps = {
+  offers: Offer[];
+};
+
+function FavoritesPage({ offers }: FavoritesPageProps): JSX.Element {
+  const favoriteOffers = offers.filter((offer) => offer.isFavorite);
+
   return (
     <div className="page">
       <header className="header">

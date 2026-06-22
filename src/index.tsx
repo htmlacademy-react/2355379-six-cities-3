@@ -1,8 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import App from './components/app/app';
-import setting from './const';
-
+import App from './app/app';
+//import setting from './const';
+//import { offers } from './mocks/offers-mocks';
+import { offers } from './mocks/offers';
 
 // площадка для монтирования react-элемента , находится в index.html: <div id="root"></div>:
 const root = ReactDOM.createRoot(
@@ -14,8 +15,8 @@ root.render(
   <React.StrictMode>
 
     <App // запуск корневого компонента App
-      offersCount={setting.offersCount}
+      offers={offers}
     />
 
-  </React.StrictMode>,
+  </React.StrictMode>
 );
